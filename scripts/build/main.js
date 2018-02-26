@@ -70,7 +70,6 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-console.log("main");
 var initAddMyItem_1 = __webpack_require__(1);
 var initWeather_1 = __webpack_require__(2);
 var initPlace_1 = __webpack_require__(3);
@@ -124,12 +123,12 @@ exports.default = initAddMyItem;
 Object.defineProperty(exports, "__esModule", { value: true });
 function initWeather() {
     var button = document.getElementById("b1");
-    button.addEventListener("click", calculateItems);
     var items = document.getElementById("items");
     var w1 = document.getElementById("su");
     var w2 = document.getElementById("rain");
     var w3 = document.getElementById("snow");
     var w4 = document.getElementById("wind");
+    button.addEventListener("click", calculateItems);
     function calculateItems(event) {
         if (event == undefined) {
             return;
@@ -215,9 +214,6 @@ function initPlace() {
             return;
         }
         if (items) {
-            while (items.firstChild) {
-                items.removeChild(items.firstChild);
-            }
             if (w1.checked) {
                 var t1 = [
                     "удочка",

@@ -1,4 +1,3 @@
-//import initchbox from './initcheckbox';
 function initPlace(): void {
     const button = document.getElementById("b1") as HTMLButtonElement;
     const items = document.getElementById("items") as HTMLUListElement;
@@ -20,9 +19,7 @@ function initPlace(): void {
         }
 
         if (items) {
-            while(items.firstChild) {
-                items.removeChild(items.firstChild);
-            }
+            
             if (w1.checked) {
                 let t1 = [
                     "удочка"
@@ -55,8 +52,6 @@ function initPlace(): void {
             if (w3.checked) {
                 let t3 = [
                     "веревка и карабины"
-
-
                 ];
                 t3.forEach(item => {
                     const li = document.createElement('li');

@@ -1,6 +1,5 @@
 function initWeather(): void {
     const button = document.getElementById("b1") as HTMLButtonElement;
-    
     const items = document.getElementById("items") as HTMLUListElement;
 
     const w1 = document.getElementById("su") as HTMLInputElement;
@@ -53,7 +52,7 @@ function initWeather(): void {
             }
 
             if (w3.checked) {
-                let t3 = ["термобелье","горнолыжный костюм","теплая обувь","термос","шапка","перчатки"]
+                let t3 = ["термобелье","горнолыжный костюм","теплая обувь","термос","шапка","перчатки"];
                 t3.forEach(item => {
                     const li = document.createElement('li');
                     li.appendChild(document.createTextNode(item));
