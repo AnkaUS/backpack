@@ -139,6 +139,9 @@ function initWeather() {
             return;
         }
         if (items) {
+            while (items.firstChild) {
+                items.removeChild(items.firstChild);
+            }
             if (w1.checked) {
                 var t1 = [
                     "солнцезащитные очки",

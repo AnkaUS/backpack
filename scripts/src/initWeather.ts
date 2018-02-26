@@ -1,13 +1,14 @@
-//import initchbox from './initcheckbox';
 function initWeather(): void {
     const button = document.getElementById("b1") as HTMLButtonElement;
-    button.addEventListener("click", calculateItems);
+    
     const items = document.getElementById("items") as HTMLUListElement;
 
     const w1 = document.getElementById("su") as HTMLInputElement;
     const w2 = document.getElementById("rain") as HTMLInputElement;
     const w3 = document.getElementById("snow") as HTMLInputElement;
     const w4 = document.getElementById("wind") as HTMLInputElement;
+
+    button.addEventListener("click", calculateItems);
 
     function calculateItems (event: Event): void {
 
@@ -20,7 +21,10 @@ function initWeather(): void {
             return;
         }
 
-        if (items) {//Здесь надо добавить сформированный список в вывод
+        if (items) {
+            while(items.firstChild) {
+                items.removeChild(items.firstChild);
+            }
 
             if (w1.checked) {
                 let t1 = [
@@ -75,6 +79,7 @@ function initWeather(): void {
         }
     }
 }
+
 
 export {
     initWeather as default,

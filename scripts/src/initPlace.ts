@@ -19,7 +19,7 @@ function initPlace(): void {
             return;
         }
 
-        if (items) {//Здесь надо добавить сформированный список в вывод
+        if (items) {
             while(items.firstChild) {
                 items.removeChild(items.firstChild);
             }
