@@ -1,0 +1,31 @@
+{
+  "name": "backpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:scripts": "webpack",
+    "postinstall": "npm run build:scripts",
+    "dev": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnkaUS/backpack.git"
+  },
+  "author": "AnkaUs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AnkaUS/backpack/issues"
+  },
+  "homepage": "https://github.com/AnkaUS/backpack#readme",
+  "devDependencies": {
+    "ts-loader": "^3.3.1",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  }
+}

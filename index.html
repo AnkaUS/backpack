@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Собери рюкзак</title>
+    <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+    <h1>Собери свой рюкзак</h1>
+    <main class="all">
+        <div id="men" class="menu">
+            <h2>Данные</h2>
+            <div class="checkboxes">
+                <h4>Погода</h4>
+                <div id="w" class="weather">
+                    <div>
+                        <input type="checkbox" name="option1" id="su">
+                        <label for="su">Солнце</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="option2" id="rain">
+                        <label for="rain">Дождь</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="option3" id="snow">
+                        <label for="snow">Снег</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="option4" id="wind">
+                        <label for="wind">Ветер</label>
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="loc">
+                        <h4>Местоположение</h4>
+                        <div><input type="checkbox" name="option1" id="lake">
+                            <label for="lake">Озеро</label></div>
+                        <div><input type="checkbox" name="option2" id="forest">
+                            <label for="forest">Лес</label></div>
+                        <div><input type="checkbox" name="option3" id="mountains">
+                            <label for="mountains">Горы</label></div>
+                        <div><input type="checkbox" name="option4" id="beach">
+                            <label for="beach">Пляж</label></div>
+                    </div>
+                    <button id="b1" class="buttonok">Применить</button>
+                </div>
+            </div>
+        </div>
+        <div class="list">
+            <h2>Список</h2>
+            <div class="addmyitem">
+                <input id="in1" type="text" class="intext" name="myitem" value="" placeholder="Что взять с собой?">
+                <input id="b2" type="button" class="buttonok" name="additem" value="Добавить">
+                <input id="saveButton" type="button" class="buttonok" name="save" value="Сохранить список">
+            </div>
+            <ul id="items" class="itemlist"></ul>
+        </div>
+    </main>
+    <script src="./main.js"></script>
+</body>
+
+</html>
