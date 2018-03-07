@@ -143,9 +143,7 @@ function initWeather() {
             }
             if (w1.checked) {
                 var t1 = [
-                    "солнцезащитные очки",
-                    "крем SPF 50",
-                    "головной убор"
+                    "солнцезащитные очки", "крем SPF 50", "головной убор"
                 ];
                 t1.forEach(function (item) {
                     var li = document.createElement('li');
@@ -174,8 +172,7 @@ function initWeather() {
             }
             if (w4.checked) {
                 var t4 = [
-                    "непродуваемая куртка",
-                    "шарф"
+                    "непродуваемая куртка", "шарф"
                 ];
                 t4.forEach(function (item) {
                     var li = document.createElement('li');
@@ -216,9 +213,7 @@ function initPlace() {
         if (items) {
             if (w1.checked) {
                 var t1 = [
-                    "удочка",
-                    "лодка",
-                    "спасательный жилет"
+                    "удочка", "лодка", "спасательный жилет"
                 ];
                 t1.forEach(function (item) {
                     var li = document.createElement('li');
@@ -229,9 +224,7 @@ function initPlace() {
             }
             if (w2.checked) {
                 var t2 = [
-                    "средство от насекомых",
-                    "корзина для ягод/грибов",
-                    "компас"
+                    "средство от насекомых", "корзина для ягод/грибов", "компас"
                 ];
                 t2.forEach(function (item) {
                     var li = document.createElement('li');
@@ -253,8 +246,7 @@ function initPlace() {
             }
             if (w4.checked) {
                 var t4 = [
-                    "купальник",
-                    "шлепанцы"
+                    "купальник", "шлепанцы"
                 ];
                 t4.forEach(function (item) {
                     var li = document.createElement('li');
@@ -277,31 +269,20 @@ exports.default = initPlace;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 function save() {
-    var saveButton = document.getElementById("saveButton");
-    saveButton.addEventListener("click", saveText);
     var ul = document.getElementById('items');
-    function saveText(event) {
-        if (event == undefined) {
-            return;
-        }
-        var target = event.target;
-        if (target.name == undefined) {
-            return;
-        }
-        var lis = ul.getElementsByTagName('li');
-        var lisContent = Array.prototype.slice.call(lis).map(function (item) {
-            return item.textContent;
+    var lis = ul.getElementsByTagName('li');
+    var link = document.getElementById('link');
+    link.addEventListener('click', saveText);
+    function saveText() {
+        var lisContent = Array.prototype.slice.call(lis).map(function (item, index) {
+            return index + ") " + item.textContent + "\n";
         });
-        console.log(lisContent);
-        console.log(JSON.stringify(lisContent));
-        fetch('http://localhost:3000/save', {
-            method: "POST",
-            body: JSON.stringify(lisContent),
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        });
+        var properties = {
+            type: 'plain/text'
+        };
+        var file = new File(lisContent, 'list.txt', properties);
+        var url = URL.createObjectURL(file);
+        link.href = url;
     }
 }
 exports.default = save;

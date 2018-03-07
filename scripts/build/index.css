@@ -91,7 +91,9 @@ input.ttext {
     padding: 0.3em 0.3em;
     border-radius: 6px;
     transition: background 0.2s;
-    background: indianred
+    background: indianred;
+    border: 0;
+    cursor: pointer;
 }
 
 .buttonok:hover,

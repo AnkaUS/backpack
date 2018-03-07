@@ -19,12 +19,10 @@ function initPlace(): void {
         }
 
         if (items) {
-            
+
             if (w1.checked) {
                 let t1 = [
-                    "удочка"
-                    , "лодка"
-                    , "спасательный жилет"
+                    "удочка", "лодка", "спасательный жилет"
                 ];
 
                 t1.forEach(item => {
@@ -37,9 +35,7 @@ function initPlace(): void {
 
             if (w2.checked) {
                 let t2 = [
-                    "средство от насекомых"
-                    , "корзина для ягод/грибов"
-                    , "компас"
+                    "средство от насекомых", "корзина для ягод/грибов", "компас"
                 ];
                 t2.forEach(item => {
                     const li = document.createElement('li');
@@ -63,8 +59,7 @@ function initPlace(): void {
 
             if (w4.checked) {
                 let t4 = [
-                    "купальник"
-                    , "шлепанцы"
+                    "купальник", "шлепанцы"
 
                 ];
                 t4.forEach(item => {
@@ -79,5 +74,6 @@ function initPlace(): void {
 }
 
 export {
-    initPlace as default,
+    initPlace as
+    default,
 };
